@@ -1,0 +1,28 @@
+
+.git
+.env
+file.txt
+
+
+# Exclude WordPress core files and database volumes
+wordpress_data/*
+# except wp-content directory
+!wordpress_data/wp-content/
+# ignore everything in wp-content by default
+wordpress_data/wp-content/*
+# but keep themes and plugins folder
+!wordpress_data/wp-content/themes/
+!wordpress_data/wp-content/plugins/
+
+# Ignore database data
+db_data/
+
+# Log files
+*.log
+
+# Ignore PHP/Composer dependencies
+vendor/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
